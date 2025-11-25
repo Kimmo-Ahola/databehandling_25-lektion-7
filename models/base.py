@@ -3,7 +3,7 @@ from sqlalchemy import Integer, MetaData, String
 from sqlalchemy.orm import DeclarativeBase, mapped_column, Mapped
 
 int_pk = Annotated[int, mapped_column(Integer, primary_key=True, autoincrement=True)]
-str_255 = Annotated[int, mapped_column(String(255))]
+str_255 = Annotated[str, mapped_column(String(255))]
 
 class Base(DeclarativeBase):
     metadata = MetaData(naming_convention={
